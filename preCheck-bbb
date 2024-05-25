@@ -39,9 +39,9 @@ grep -c ^processor /proc/cpuinfo
 
 #________UFW____
 ufw allow 443
-echo " port 443 is added "
+echo "port 443 is added "
 ufw allow 80
-echo " port 80 is added "
-echo -e " ${Green} System ufw ${NOCOLOR} status"
+echo "port 80 is added "
+echo -e "${Green} System ufw ${NOCOLOR} status"
 ufw status
-echo -e " ${RED}Now can be installed bbb-script ${NOCOLOR} "
+echo -e "${RED}Now can be installed bbb-script ${NOCOLOR} "
