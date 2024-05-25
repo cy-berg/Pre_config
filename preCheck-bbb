@@ -1,0 +1,46 @@
+#!/bin/bash
+#ANSI escape codes for the colored output
+NOCOLOR='\033[0m'
+Blue='\033[0;34m'   #'0;34' is Blue's ANSI color code
+Red='\033[0;31m'   #'0;31' is Red's ANSI color code
+Green='\033[0;32m'   #'0;32' is Green's ANSI color code
+Yellow='\033[1;32m'   #'1;32' is Yellow's ANSI color code
+Purple='\033[1;35m'  #
+# use example:     echo -e "I ${RED}love${NOCOLOR} Linux"
+
+echo -e " ${Purple} Heute " `date` ${NOCOLOR} Herzlich willkommen "
+echo -e " ${RED}you should run the script as ${NOCOLOR} root"
+
+echo "system LANG is"
+cat /etc/default/locale
+systemctl show-environment
+#
+echo "Download LANG Packet"
+apt-get install -y language-pack-en
+update-locale LANG=en_US.UTF-8
+systemctl set-environment LANG=en_US.UTF-8
+#
+echo -e " ${RED}Now your system LANG is ${NOCOLOR} "
+systemctl show-environment
+echo " your server memory:"
+free -h
+echo "Your system kernel and Version:"
+cat /etc/lsb-release
+echo "check 64-bit Version"
+uname -m
+#
+echo "check that your server supports IPV6."
+ip addr | grep inet6
+echo "check that your server is running Linux kernel 5.x"
+uname -r
+
+echo "check that your server has (at least) 8 CPU cores"
+grep -c ^processor /proc/cpuinfo
+#________UFW____
+ufw allow 443
+echo "port 443 is added"
+ufw allow 80
+echo "port 80 is added"
+echo -e " ${Green} System ufw ${NOCOLOR} status"
+ufw status
+echo -e " ${RED}Now can install bbb-script ${NOCOLOR} "
