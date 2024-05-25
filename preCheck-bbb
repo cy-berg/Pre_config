@@ -8,7 +8,7 @@ Yellow='\033[1;32m'   #'1;32' is Yellow's ANSI color code
 Purple='\033[1;35m'  #
 # use example:     echo -e "I ${RED}love${NOCOLOR} Linux"
 
-echo -e " ${Purple} Heute " `date` ${NOCOLOR} Herzlich willkommen "
+echo -e " ${Purple} Herzlich willkommen ${NOCOLOR}  "
 echo -e " ${RED}you should run the script as ${NOCOLOR} root"
 
 echo "system LANG is"
