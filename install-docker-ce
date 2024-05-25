@@ -27,14 +27,14 @@ echo \
 sudo apt-get update
 
 echo -e "STARTS ${Blue}installing-Docker-ce,cli,io-and-compose-plugin${NOCOLOR} on your VM"
-#echo -e "${NOCOLOR}"
+
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
 
 
 echo -e " ${Green} Docker and Docker-Compose installed ${NOCOLOR} Docker Version"
 sudo docker -v && docker compose version
 
-echo "Verify the Docker Engine installation"
+echo -e " ${Green}Verify the Docker Engine installation${NOCOLOR} "
 sudo docker run hello-world
 echo "When the container runs, it prints a confirmation message and exit"
 
