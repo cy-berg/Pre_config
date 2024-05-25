@@ -33,15 +33,15 @@ echo "check that your server supports IPV6."
 ip addr | grep inet6
 echo "check that your server is running Linux kernel 5.x"
 uname -r
-
+#
 echo "check that your server has 8 CPU cores"
 grep -c ^processor /proc/cpuinfo
 
 #________UFW____
 ufw allow 443
-echo "port 443 is added"
+echo " port 443 is added "
 ufw allow 80
-echo "port 80 is added"
+echo " port 80 is added "
 echo -e " ${Green} System ufw ${NOCOLOR} status"
 ufw status
-echo -e " ${RED}Now can install bbb-script ${NOCOLOR} "
+echo -e " ${RED}Now can be installed bbb-script ${NOCOLOR} "
