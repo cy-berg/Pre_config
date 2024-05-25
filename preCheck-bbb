@@ -34,8 +34,9 @@ ip addr | grep inet6
 echo "check that your server is running Linux kernel 5.x"
 uname -r
 
-echo "check that your server has (at least) 8 CPU cores"
+echo "check that your server has 8 CPU cores"
 grep -c ^processor /proc/cpuinfo
+
 #________UFW____
 ufw allow 443
 echo "port 443 is added"
