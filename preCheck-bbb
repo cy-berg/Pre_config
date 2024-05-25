@@ -45,5 +45,5 @@ ufw allow 80
 echo "port 80 is added "
 echo -e "${Purple} System ufw ${NOCOLOR} status"
 ufw status
-echo -e "${Red} If you have Docker and Docker compose already installed  ${NOCOLOR} "
-echo -e "${Green} Now You Can start with BBB-Script  ${NOCOLOR} "
+echo -e "${Red} Please check If you have Docker and Docker compose already installed and then Start with  ${NOCOLOR} "
+echo -e "${Green} BBB-install-Script  ${NOCOLOR} "
