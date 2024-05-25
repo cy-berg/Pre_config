@@ -20,21 +20,22 @@ apt-get install -y language-pack-en
 update-locale LANG=en_US.UTF-8
 systemctl set-environment LANG=en_US.UTF-8
 #
-echo -e " ${RED}Now your system LANG is ${NOCOLOR} "
+echo -e " ${Purple}Now your system LANG is ${NOCOLOR} "
 systemctl show-environment
 echo " your server memory:"
 free -h
-echo "Your system kernel and Version:"
+
+echo -e " ${Purple}Your system kernel and Version: ${NOCOLOR} "
 cat /etc/lsb-release
 echo "check 64-bit Version"
 uname -m
 #
-echo "check that your server supports IPV6."
+echo -e " ${Purple}check that your server supports IPV6 ${NOCOLOR} "
 ip addr | grep inet6
 echo "check that your server is running Linux kernel 5.x"
 uname -r
 #
-echo "check that your server has 8 CPU cores"
+echo -e " ${Purple}your system cpu should be at least 8 cores ${NOCOLOR} "
 grep -c ^processor /proc/cpuinfo
 
 #________UFW____
@@ -44,4 +45,4 @@ ufw allow 80
 echo "port 80 is added "
 echo -e "${Green} System ufw ${NOCOLOR} status"
 ufw status
-echo -e "${RED}Now can be installed bbb-script ${NOCOLOR} "
+echo -e "${Green}Now can be installed bbb-script ${NOCOLOR} "
