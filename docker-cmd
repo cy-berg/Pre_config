@@ -5,6 +5,7 @@ docker pull <image_name>
   docker images
 #Docker Build 
   docker build -t image_name:tag .
-#Build a custom Docker image from hosted Dockerfile in a Github repository, as bellow.
-# 1. 	docker build -t <NEW IMAGE NAME> <URL#BRANCH#PATH>
+#run the image 
+docker run -d --name container-xx image-xx
+
   
