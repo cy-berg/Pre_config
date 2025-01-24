@@ -1,0 +1,10 @@
+#Docker run will list all the containers which are running
+docker ps
+docker pull <image_name>
+#Lists all the pulled images which are present in our system.
+  docker images
+#Docker Build 
+  docker build -t image_name:tag .
+#Build a custom Docker image from hosted Dockerfile in a Github repository, as bellow.
+# 1. 	docker build -t <NEW IMAGE NAME> <URL#BRANCH#PATH>
+  
