@@ -1,8 +1,11 @@
 #Docker run will list all the containers which are running
 docker ps
-docker pull <image_name>
-#Lists all the pulled images which are present in our system.
+docker container ls
+docker container ls -a
+#Lists all images which are present in our system.
   docker images
+#
+docker pull <image_name>
 #Docker Build 
   docker build -t image_name:tag .
 #run the image 
